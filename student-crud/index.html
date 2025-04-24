@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="style.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+<div class="container mt-4">
+  <h2 class="text-center text-primary">Student Attendence</h2>
+
+  <!-- ADD Form -->
+
+  <div class="card p-3 mt-3">
+    <h2>Add Student</h2>
+    <div class="mb-3">
+      <input type="text" id="StudentName" class="form form-control" placeholder="Enter name"/>
+    </div>
+    <button class="btn btn-success" onclick="addStudent()">Add Student</button>
+  </div>
+
+  <!-- Attendence Table -->
+
+  <div class="card p-3 mt-3">
+    <h2>Mark Student</h2>
+    <div class="mb-3">
+      <label>Select Data :</label>
+      <input type="date" id="attendenceDate" class="form form-control" placeholder="Enter name"/>
+    </div>
+    <table class="table table-bordered mt-2">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Attendence</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="StudentTable"></tbody>
+    </table>  
+  </div>
+
+  <!-- Attendence Report -->
+
+  <div class="card p-3 mt-3">
+    <h2>Attendence Report</h2>
+    <button class="btn btn-success m-2" onclick="filterAttendence('Present')">Show Present</button>
+    <button class="btn btn-warning m-2" onclick="filterAttendence('Absent')">Show Absent</button>
+    <button class="btn btn-primary m-2" onclick="showAll()">Show all</button>
+    <button class="btn btn-danger m-2" onclick="clearAll()">clearAll Data </button>
+  </div>
+
+  <!-- Attendence Summary -->
+
+
+  <div class="card p-3 mt-3">
+    <h2> Student Summary</h2>
+    <p>Total Students<b id="totalStudents">0</b></p>
+    <p>Present <b id="presentCount">0</b></p>
+    <p>Absent <b id="absentCount">0</b></p>
+  
+  </div>
+
+
+</div>
+
+
+
+<script src="p.js"></script>
